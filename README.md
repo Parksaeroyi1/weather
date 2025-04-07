@@ -29,24 +29,153 @@ A responsive weather application built with **React**, powered by **Vite** and s
 
 ---
 
-1. Open folder of project and open terminal and type npm create vite@latest -- --template react
-2. Follow steps in terminal which is
-   - cd "project app"
-   - npm install
-   - npm run dev
-3. Check local host if working
-4. Once folder and files are loaded start deleting the ones we dont need
-   - vite.svg under public
-   - react.svg under assets
-   - app.css
-   - app.jsx delete the coding inside not the file
-   - index.css delete the coding inside
-   - index.html delete link to image
-   - change title to project name
+Weather App project:
 
-5. In source file create a components file and add 2 files:
-   - WeatherApp.jsx
-   - WeatherApp.css
+---
 
-6. In the assests folder add another folder for images
+# 🌦️ React Weather App Setup Guide (Vite + OpenWeatherMap)
+
+Follow these steps to set up a simple weather app using **Vite**, **React**, and **OpenWeatherMap API**.
+
+---
+
+## ✅ 1. Create the React App with Vite
+
+npm create vite@latest my-weather-app -- --template react
+cd my-weather-app
+npm install
+npm run dev
+```
+
+> ✔️ Replace `my-weather-app` with your preferred project name.  
+> ✔️ Visit `http://localhost:5173` to confirm it runs.
+
+---
+
+## 🧹 2. Clean Up Starter Files
+
+Delete these files:
+
+```
+public/vite.svg
+src/assets/react.svg
+src/App.css
+```
+
+Clear the contents of these files (but keep them):
+
+- `src/App.jsx`
+- `src/index.css`
+
+In `index.html`:
+
+- Delete the image `<link>` referencing `vite.svg`
+- Update the `<title>` to your project name, e.g.:
+
+```html
+<title>Weather App</title>
+```
+
+---
+
+## 🧱 3. Setup Project Structure
+
+### 🔧 Create Folders & Files
+
+
+src/components/WeatherApp.jsx
+src/components/WeatherApp.css
+src/assets/images/
+```
+
+### 🖼️ Add the following image files into `src/assets/images/`:
+
+- `sun.png`
+- `cloudy1.png`
+- `rainy.png`
+- `loading.gif`
+
+---
+
+## 🧠 4. Install Recommended VS Code Extension (Optional)
+
+Install: **ES7+ React/Redux/React-Native Snippets**
+and ESL
+This helps you scaffold React components faster.
+
+---
+
+## 🧑‍💻 5. Paste Component Code
+
+Paste your app’s code inside `WeatherApp.jsx` and style it in `WeatherApp.css`.
+
+In `App.jsx`, import and render the component:
+
+```jsx
+import WeatherApp from './components/WeatherApp';
+
+function App() {
+  return <WeatherApp />;
+}
+
+export default App;
+```
+
+---
+
+## 🌐 6. Add Font Awesome Icons (CDN)
+
+Go to [cdnjs Font Awesome](https://cdnjs.com/libraries/font-awesome)  
+Copy the latest **CSS link**, then add it to `index.html` inside `<head>`:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+```
+
+---
+
+## ✍️ 7. Add Google Fonts (Optional)
+
+1. Go to [https://fonts.google.com/](https://fonts.google.com/)
+2. Select a font (e.g., **Poppins**) → copy the `@import` line
+3. Paste it at the top of `index.css`:
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+```
+
+---
+
+## 🔑 8. Get and Use Your OpenWeatherMap API Key
+
+1. Sign up at [https://openweathermap.org/api](https://openweathermap.org/api)
+2. Go to **"Current Weather Data"** and copy your API key
+
+In `WeatherApp.jsx`, replace the `api_key` variable:
+
+```js
+const api_key = 'YOUR_API_KEY_HERE';
+```
+
+---
+
+## 🧪 9. Run Your App
+
+Start the dev server:
+
+
+npm run dev
+
+
+Visit: `http://localhost:5173`
+
+---
+
 
